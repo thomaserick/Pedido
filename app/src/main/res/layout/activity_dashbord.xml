@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".DashbordActivity">
+
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="586dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="137dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/bt_clientes"
+            android:layout_width="370dp"
+            android:layout_height="71dp"
+            android:layout_margin="20dp"
+            android:text="Cliente" />
+
+        <Button
+            android:id="@+id/bt_produtos"
+            android:layout_width="370dp"
+            android:layout_height="71dp"
+            android:layout_margin="20dp"
+            android:text="Produto" />
+
+        <Button
+            android:id="@+id/bt_pedidos"
+            android:layout_width="370dp"
+            android:layout_height="71dp"
+            android:layout_margin="20dp"
+            android:text="Pedido" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
