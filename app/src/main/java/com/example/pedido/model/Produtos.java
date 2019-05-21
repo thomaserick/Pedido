@@ -1,11 +1,20 @@
 package com.example.pedido.model;
 
-public class Produtos {
+import java.io.Serializable;
+
+public class Produtos implements Serializable {
 
     private Long id;
     private int codigo;
     private String descricao;
     private int quantidade;
+    private float preco;
+
+
+    @Override
+    public String toString(){
+        return codigo + " - " + descricao + " - R$" + preco;
+    }
 
     public Long getId() {
         return id;
@@ -37,5 +46,13 @@ public class Produtos {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
 }

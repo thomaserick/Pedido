@@ -39,6 +39,14 @@
             android:hint="Quantidade"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/et_precoProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Preco"
+            android:inputType="textPersonName" />
+
         <Button
             android:id="@+id/btn_IncaltProduto"
             android:layout_width="match_parent"
