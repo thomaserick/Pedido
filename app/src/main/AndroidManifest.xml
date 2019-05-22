@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormProdutos"></activity>
+        <activity android:name=".FormPedidos"></activity>
+        <activity android:name=".PedidoActivity" />
+        <activity android:name=".FormClientes" />
+        <activity android:name=".ClienteActivity" />
+        <activity android:name=".FormProdutos" />
         <activity android:name=".ProdutoActivity" />
         <activity android:name=".DashbordActivity" />
         <activity android:name=".RegisterActivity" />

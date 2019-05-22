@@ -24,6 +24,8 @@ public class DashbordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent i  = new Intent(DashbordActivity.this, ClienteActivity.class);
+                startActivity(i);
 
 
             }
@@ -41,6 +43,9 @@ public class DashbordActivity extends AppCompatActivity {
         btPedidos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent i  = new Intent(DashbordActivity.this, PedidoActivity.class);
+                startActivity(i);
 
             }
         });
