@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="CodigoProduto"
+            android:hint="Codigo do Produto"
             android:inputType="textPersonName" />
 
         <EditText
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Descricao Produto"
+            android:hint="Descricao do  Produto"
             android:inputType="textPersonName" />
 
         <EditText
@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Quantidade"
-            android:inputType="textPersonName" />
+            android:inputType="numberSigned"
+            android:numeric="integer" />
 
         <EditText
             android:id="@+id/et_precoProduto"
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Preco"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/btn_IncaltProduto"

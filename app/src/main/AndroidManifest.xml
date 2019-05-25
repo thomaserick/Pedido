@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--<&#45;&#45; @style/Theme.AppCompat.DayNight.NoActionBar&ndash;&gt;-->
         <activity android:name=".FormPedidos"></activity>
         <activity android:name=".PedidoActivity" />
         <activity android:name=".FormClientes" />

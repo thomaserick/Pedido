@@ -30,6 +30,7 @@ public class ProdutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produto);
 
+        setTitle("Produtos");
         btnCadProdutos =(Button)findViewById(R.id.btn_CadProdutos);
 
         lista = (ListView)findViewById(R.id.lv_produtos);

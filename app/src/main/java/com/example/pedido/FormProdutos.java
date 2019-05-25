@@ -1,6 +1,7 @@
 package com.example.pedido;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,10 +18,12 @@ public class FormProdutos extends AppCompatActivity {
     Produtos editarProduto, produto;
     Database db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_produtos);
+
 
         produto = new Produtos();
         db = new Database(FormProdutos.this);
@@ -37,6 +40,7 @@ public class FormProdutos extends AppCompatActivity {
 
         if(editarProduto !=null){
           btnIncaltProduto.setText("Modificar");
+            setTitle("Alteracao de Produtos");
 
           etCodgio.setText(Integer.toString(editarProduto.getCodigo()));
           etDescricao.setText(editarProduto.getDescricao());
@@ -46,7 +50,9 @@ public class FormProdutos extends AppCompatActivity {
           produto.setId(editarProduto.getId());
 
         } else {
+
             btnIncaltProduto.setText("Cadastrar");
+            setTitle("Cadastro de Produtos");
         }
 
         btnIncaltProduto.setOnClickListener(new View.OnClickListener() {

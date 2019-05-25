@@ -13,6 +13,7 @@ public class ClienteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
+        setTitle("Clientes");
 
         btnCadCliente = (Button)findViewById(R.id.btn_CadClientes) ;
 

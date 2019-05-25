@@ -17,7 +17,7 @@
 
         <ListView
             android:id="@+id/lv_produtos"
-            android:layout_width="384dp"
+            android:layout_width="377dp"
             android:layout_height="504dp">
 
         </ListView>

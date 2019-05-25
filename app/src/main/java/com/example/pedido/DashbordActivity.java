@@ -15,6 +15,8 @@ public class DashbordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashbord);
 
+        setTitle("Menu Pedido");
+
 
         btClientes=(Button)findViewById(R.id.bt_clientes);
         btProdutos=(Button)findViewById(R.id.bt_produtos);
