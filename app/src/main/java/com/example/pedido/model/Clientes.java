@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Clientes implements Serializable {
 
-    private long id;
+    private Long id;
     private String nome;
     private String endereco;
     private int endnum;
@@ -12,12 +12,12 @@ public class Clientes implements Serializable {
 
 
     @Override
-    public String toString(){
+    public String toString() {
         return id + " - " + nome + " - " + endereco;
 
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

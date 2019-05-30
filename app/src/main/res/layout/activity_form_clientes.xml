@@ -15,37 +15,65 @@
     tools:layout_editor_absoluteY="8dp"
     tools:ignore="MissingConstraints">
 
-    <EditText
-        android:id="@+id/et_nome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/tvNome"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Nome"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_endereco"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Endereco"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/et_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_endnum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Numero"
-        android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/tvEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Endereço"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/et_telefone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Telefone"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/et_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/tcNumero"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Número"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_endnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tvTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Telefone"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
 
     <Button

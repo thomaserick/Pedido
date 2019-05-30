@@ -15,37 +15,65 @@
         tools:layout_editor_absoluteY="8dp"
         tools:ignore="MissingConstraints">
 
+        <TextView
+            android:id="@+id/tvCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Código do Produto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/et_CodigoProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Codigo do Produto"
-            android:inputType="textPersonName" />
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tcDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Descrição"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et_DescricaoProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Descricao do  Produto"
             android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/tvQuantidae"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Quantidade"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et_QuantidadeProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Quantidade"
             android:inputType="numberSigned"
             android:numeric="integer" />
+
+        <TextView
+            android:id="@+id/tvPreco"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Preço"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et_precoProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Preco"
             android:inputType="numberDecimal" />
 
         <Button
@@ -53,5 +81,6 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Cadastrar" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

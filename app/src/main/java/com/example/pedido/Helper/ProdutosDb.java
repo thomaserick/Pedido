@@ -1,4 +1,4 @@
-package com.example.pedido.DBHelper;
+package com.example.pedido.Helper;
 
 import android.content.ContentValues;
 import android.content.Context;
