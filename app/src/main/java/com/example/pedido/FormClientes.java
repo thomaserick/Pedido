@@ -105,6 +105,7 @@ public class FormClientes extends AppCompatActivity {
 
                         if (res == true) {
                             Toast.makeText(FormClientes.this, "Cliente inserido com Sucesso!", Toast.LENGTH_SHORT).show();
+                            finish();
                         } else {
                             Toast.makeText(FormClientes.this, "Erro; Nao foi possível inserir o Cliente.", Toast.LENGTH_SHORT).show();
                         }
@@ -119,8 +120,10 @@ public class FormClientes extends AppCompatActivity {
 
                     if (res == true) {
                         Toast.makeText(FormClientes.this, "Cliente Alterado com Sucesso!", Toast.LENGTH_SHORT).show();
+                        finish();
                     } else {
                         Toast.makeText(FormClientes.this, "Erro; Nao foi possivel Alterar o Cliente.", Toast.LENGTH_SHORT).show();
+
                     }
 
                     db.close();

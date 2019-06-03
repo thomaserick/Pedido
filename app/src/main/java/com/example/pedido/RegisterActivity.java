@@ -53,13 +53,15 @@ public class RegisterActivity extends AppCompatActivity {
                         Boolean res = db.insertUser(sname, suser, spasswd);
 
                         if (res == true) {
-                            Toast.makeText(RegisterActivity.this, "Usuario inserido com Sucesso!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Usuário inserido com Sucesso!", Toast.LENGTH_SHORT).show();
+                            finish();
+
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Erro; Nao foi possivel inserir o usuario.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Erro: Nao foi possível inserir o usuário.", Toast.LENGTH_SHORT).show();
                         }
 
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Usuario ja cadastrado.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Usuário já cadastrado.", Toast.LENGTH_SHORT).show();
 
                     }
 

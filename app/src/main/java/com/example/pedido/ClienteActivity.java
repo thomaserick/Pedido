@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -13,6 +14,7 @@ import android.widget.ListView;
 import com.example.pedido.model.Clientes;
 import com.example.pedido.model.Produtos;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class ClienteActivity extends AppCompatActivity {
@@ -37,6 +39,29 @@ public class ClienteActivity extends AppCompatActivity {
 
         registerForContextMenu(lista);
 
+        //Pega as informaçoes da Lista
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+
+                Clientes clienteSel = (Clientes) adapter.getItemAtPosition(position);
+
+                Intent i = new Intent(ClienteActivity.this, FormClientes.class);
+                i.putExtra("select-cliente", clienteSel);
+                startActivity(i);
+            }
+        });
+
+        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapter, View view, int position, long id) {
+                cliente = (Clientes) adapter.getItemAtPosition(position);
+                return false;
+            }
+        });
+
+
+        //Chama FormClientes
         btnCadCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,11 +70,14 @@ public class ClienteActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
+    //Deletar os Clientes
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        MenuItem menuDelete = menu.add("Deletar Este Produto");
+        MenuItem menuDelete = menu.add("Deletar este Cliente");
         ((MenuItem) menuDelete).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -62,6 +90,8 @@ public class ClienteActivity extends AppCompatActivity {
         });
     }
 
+
+    //Lista os Clientes
     public void listaCliente() {
         db = new Database(ClienteActivity.this);
         lv_clientes = db.getAllCliente();
@@ -72,6 +102,13 @@ public class ClienteActivity extends AppCompatActivity {
             lista.setAdapter(adapter);
         }
 
+    }
+
+    //Chama o metodo lista
+    @Override
+    protected void onResume() {
+        super.onResume();
+        listaCliente();
     }
 
 }

@@ -110,8 +110,10 @@ public class FormProdutos extends AppCompatActivity {
 
                         if (res == true) {
                             Toast.makeText(FormProdutos.this, "Produto inserido com Sucesso!", Toast.LENGTH_SHORT).show();
+                            finish();
                         } else {
                             Toast.makeText(FormProdutos.this, "Erro; Nao foi possivel inserir o Produto.", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
                         db.close();
 
@@ -124,8 +126,10 @@ public class FormProdutos extends AppCompatActivity {
 
                     if (res == true) {
                         Toast.makeText(FormProdutos.this, "Produto Alterado com Sucesso!", Toast.LENGTH_SHORT).show();
+                        finish();
                     } else {
                         Toast.makeText(FormProdutos.this, "Erro; Nao foi possivel Alterar o Produto.", Toast.LENGTH_SHORT).show();
+
                     }
 
                     db.close();

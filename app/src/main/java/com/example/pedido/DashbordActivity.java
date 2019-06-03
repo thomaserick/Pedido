@@ -20,7 +20,7 @@ public class DashbordActivity extends AppCompatActivity {
 
         btClientes=(Button)findViewById(R.id.bt_clientes);
         btProdutos=(Button)findViewById(R.id.bt_produtos);
-        btPedidos=(Button)findViewById(R.id.bt_pedidos);
+        btPedidos=(Button)findViewById(R.id.bt_addItens);
 
         btClientes.setOnClickListener(new View.OnClickListener() {
             @Override

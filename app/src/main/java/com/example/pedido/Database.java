@@ -26,11 +26,11 @@ public class Database extends SQLiteOpenHelper {
     private static final String DELETE_PRODUTO = "drop table if exists produtos";
 
     //Clientes
-    private static final String CREATE_CLIENTE = "CREATE TABLE clientes(id INTEGER PRIMARY KEY autoincrement, codigo INTEGER, nome TEXT NOT NULL, endereco TEXT NOT NULL, endnum INTEGER , telefone TEXT);";
+    private static final String CREATE_CLIENTE = "CREATE TABLE clientes(id INTEGER PRIMARY KEY autoincrement, nome TEXT NOT NULL, endereco TEXT NOT NULL, endnum INTEGER , telefone TEXT);";
     private static final String DELETE_CLIENTE = "drop table if exists clientes";
 
     //Pedido
-    private static final String CREATE_PEDIDO = "CREATE TABLE pedidos(codigo INTEGER PRIMARY KEY ,  idCliente INTEGER  NOT NULL ,data DATETIME DEFAULT CURRENT_TIMESTAMP , status TEXT);";
+    private static final String CREATE_PEDIDO = "CREATE TABLE pedidos(codigo PRIMARY KEY autoincrement , idCliente INTEGER  NOT NULL, Cliente TEXT NOT NULL , formapg TEXT NOT NULL ,data DATETIME DEFAULT CURRENT_TIMESTAMP , status TEXT, valorTotal INTEGER NOT NULL);";
     private static final String DELETE_PEDIDO = "drop table if exists pedidos";
 
     //ItemPedido
@@ -47,7 +47,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(CREATE_USER);
         db.execSQL(CREATE_PRODUTO);
         db.execSQL(CREATE_CLIENTE);
-        //db.execSQL(CREATE_PEDIDO);
+        db.execSQL(CREATE_PEDIDO);
         //db.execSQL(CREATE_ITEMPEDIDO);
 
 
@@ -259,9 +259,8 @@ public class Database extends SQLiteOpenHelper {
 
     public void deletarCliente(Clientes cliente) {
 
-        //String[] args = {cliente.getId().toString()};
-
-        // getWritableDatabase().delete("clientes", "id=?", args);
+        String[] args = {cliente.getId().toString()};
+        getWritableDatabase().delete("clientes", "id=?", args);
     }
 
 
@@ -276,6 +275,9 @@ public class Database extends SQLiteOpenHelper {
         }
 
     }
+
+
+//Pedidos
 
 
 }

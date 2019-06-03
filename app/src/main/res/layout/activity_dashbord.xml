@@ -31,7 +31,7 @@
             android:text="Produto" />
 
         <Button
-            android:id="@+id/bt_pedidos"
+            android:id="@+id/bt_addItens"
             android:layout_width="370dp"
             android:layout_height="71dp"
             android:layout_margin="20dp"

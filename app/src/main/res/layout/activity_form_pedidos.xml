@@ -8,68 +8,80 @@
     tools:context=".FormPedidos">
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
+        android:layout_width="355dp"
+        android:layout_height="728dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="Cliente"
-            android:textSize="30sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="376dp"
-            android:layout_height="60dp" />
+            android:id="@+id/sp_clientes"
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:scrollbarSize="6dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Produto"
-            android:textSize="30sp"
+            android:layout_height="35dp"
+            android:text="Forma de Pagamento"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="374dp"
-            android:layout_height="60dp" />
+            android:id="@+id/sp_formpg"
+            android:layout_width="332dp"
+            android:layout_height="40dp" />
 
-        <EditText
-            android:id="@+id/editText2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:hint="Quantidade"
-            android:inputType="textPersonName" />
+            android:layout_height="72dp"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:hint="Preco"
-            android:inputType="textPersonName" />
+            <TextView
+                android:id="@+id/tv_itens"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:text="Itens do Pedido"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editText4"
+            <Button
+                android:id="@+id/bt_addItens"
+                android:layout_width="184dp"
+                android:layout_height="55dp"
+                android:drawableLeft="@drawable/ic_action_add"
+                android:text="Itens"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ListView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:enabled="true"
-            android:hint="Valor Total"
-            android:inputType="textPersonName" />
+            android:layout_height="309dp">
+
+        </ListView>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bt_incalt"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:text="Cadastrar" />
+            android:layout_height="60dp"
+            android:text="Finalizar Pedido" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

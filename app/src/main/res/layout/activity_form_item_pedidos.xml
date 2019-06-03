@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".FormItemPedidos">
+
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="713dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Produto"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="46dp" />
+
+        <EditText
+            android:id="@+id/et_Quantidade"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:hint="Quantidade"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_Preco"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Preco"
+            android:imeOptions="normal"
+            android:inputType="numberDecimal"
+            android:saveEnabled="true"
+            android:soundEffectsEnabled="false" />
+
+        <EditText
+            android:id="@+id/et_Vltotal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:editable="false"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Valor Total"
+            android:imeOptions="actionNone"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/bt_addItens"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Adicionar" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
