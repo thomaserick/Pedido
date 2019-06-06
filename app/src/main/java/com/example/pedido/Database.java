@@ -5,8 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.ContactsContract;
 
 import com.example.pedido.model.Clientes;
+import com.example.pedido.model.Pedido;
+import com.example.pedido.model.PedidoItem;
 import com.example.pedido.model.Produtos;
 
 import java.util.ArrayList;
@@ -30,11 +33,11 @@ public class Database extends SQLiteOpenHelper {
     private static final String DELETE_CLIENTE = "drop table if exists clientes";
 
     //Pedido
-    private static final String CREATE_PEDIDO = "CREATE TABLE pedidos(codigo PRIMARY KEY autoincrement , idCliente INTEGER  NOT NULL, Cliente TEXT NOT NULL , formapg TEXT NOT NULL ,data DATETIME DEFAULT CURRENT_TIMESTAMP , status TEXT, valorTotal INTEGER NOT NULL);";
+    private static final String CREATE_PEDIDO = "CREATE TABLE pedidos(codigo INTEGER PRIMARY KEY autoincrement , idCliente INTEGER  NOT NULL, cliente TEXT NOT NULL , formapg TEXT NOT NULL ,data TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, status TEXT, valorTotal INTEGER);";
     private static final String DELETE_PEDIDO = "drop table if exists pedidos";
 
     //ItemPedido
-    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER PRIMARY KEY, item INTEGER PRIMARY KEY ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL);";
+    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER PRIMARY KEY NOT NULL , item INTEGER  NOT NULL , idProduto INTEGER  NOT NULL, produto TEXT NOT NULL ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL);";
     private static final String DELETE_ITEMPEDIDO = "drop table if exists itemPedidos";
 
 
@@ -48,7 +51,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(CREATE_PRODUTO);
         db.execSQL(CREATE_CLIENTE);
         db.execSQL(CREATE_PEDIDO);
-        //db.execSQL(CREATE_ITEMPEDIDO);
+        db.execSQL(CREATE_ITEMPEDIDO);
 
 
     }
@@ -279,5 +282,94 @@ public class Database extends SQLiteOpenHelper {
 
 //Pedidos
 
+    public Boolean insertPedidos(Pedido pedido) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("idCliente", pedido.getIdCliente());
+        cv.put("Cliente", pedido.getCliente());
+        cv.put("formapg", pedido.getFormapg());
+        cv.put("status", pedido.getStatus());
+        cv.put("valorTotal", 0);
+
+
+        Long id = db.insert("pedidos", null, cv);
+
+        if (id == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    //Listar Pedidos
+    public ArrayList<Pedido> getAllPedidos() {
+        String[] columns = {"codigo", "idCliente", "Cliente", "formapg", "data", "status", "valorTotal"};
+        Cursor c = this.getReadableDatabase().query("pedidos", columns, null, null, null, null, null, null);
+
+        ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
+
+        while (c.moveToNext()) {
+            Pedido pedido = new Pedido();
+
+            pedido.setCodigo(c.getLong(0));
+            pedido.setCliente(c.getString(2));
+
+            pedidos.add(pedido);
+
+        }
+
+        return pedidos;
+
+    }
+
+    //Listar Item Pedidos
+    public ArrayList<PedidoItem> getAllItemPedidos(PedidoItem itemPedido) {
+        String[] columns = {"codigo", "item", "idProduto", "Produto", "quantidade", "valorUnit", "valorTotal"};
+        String[] args = {itemPedido.getCodigo().toString()};
+        Cursor c = this.getReadableDatabase().query("itemPedidos", columns, "codigo=?", args, null, null, null, null);
+
+        ArrayList<PedidoItem> pedidoItem = new ArrayList<PedidoItem>();
+
+        while (c.moveToNext()) {
+            PedidoItem pedidoitem = new PedidoItem();
+
+            pedidoitem.setCodigo(c.getLong(0));
+            pedidoitem.setItem(c.getInt(1));
+            pedidoitem.setProduto(c.getString(3));
+            pedidoitem.setQuantidade(c.getInt(4));
+            pedidoitem.setValorUnit(c.getDouble(5));
+            pedidoitem.setValorTotal(c.getDouble(6));
+
+            pedidoItem.add(pedidoitem);
+
+        }
+        return pedidoItem;
+
+    }
+
+    public Boolean insertItemPedido(PedidoItem pedidoItem) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("codigo", pedidoItem.getCodigo());
+        cv.put("item", pedidoItem.getItem());
+        cv.put("idProduto", pedidoItem.getIdProduto());
+        cv.put("produto", pedidoItem.getProduto());
+        cv.put("quantidade", pedidoItem.getQuantidade());
+        cv.put("valorUnit", pedidoItem.getValorUnit());
+        cv.put("valorTotal", pedidoItem.getValorTotal());
+
+
+        Long id = db.insert("itemPedidos", null, cv);
+
+        if (id == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
 }

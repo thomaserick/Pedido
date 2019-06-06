@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormItemPedidos"></activity>
-        <!-- <&#45;&#45; @style/Theme.AppCompat.DayNight.NoActionBar&ndash;&gt; -->
+        <activity android:name=".FormAddItemPedido"></activity>
+        <activity android:name=".FormHeadPedidos" />
+        <activity android:name=".FormItemPedidos" /> <!-- <&#45;&#45; @style/Theme.AppCompat.DayNight.NoActionBar&ndash;&gt; -->
         <activity android:name=".FormPedidos" />
         <activity android:name=".PedidoActivity" />
         <activity android:name=".FormClientes" />

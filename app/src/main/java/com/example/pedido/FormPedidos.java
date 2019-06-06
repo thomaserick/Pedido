@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.pedido.model.CampoVazio;
 import com.example.pedido.model.Clientes;
+import com.example.pedido.model.Pedido;
 import com.example.pedido.model.Produtos;
 
 import java.util.ArrayList;
@@ -23,7 +26,7 @@ public class FormPedidos extends AppCompatActivity {
     ArrayList<Clientes> sp_clientes;
     Spinner spClientes, spFormapg;
     Button btaddItens;
-
+    Pedido pedido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,19 @@ public class FormPedidos extends AppCompatActivity {
 
         listaCliente();
         ListaFormapg();
+
+
+        spClientes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Clientes clienteSel = (Clientes) spClientes.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         btaddItens.setOnClickListener(new View.OnClickListener() {

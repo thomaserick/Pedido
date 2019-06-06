@@ -1,16 +1,27 @@
 package com.example.pedido.model;
 
-import java.sql.Date;
+import org.w3c.dom.Text;
 
-public class PedidoItem {
+import java.io.Serializable;
+
+
+public class PedidoItem implements Serializable {
 
     private Long codigo;
     private int item;
-    private Long idProduto;
-    private Long Produto;
+    private int idProduto;
+    private String Produto;
     private int quantidade;
-    private int valorUnit;
-    private int valorTotal;
+    private Double valorUnit;
+    private Double valorTotal;
+
+
+    @Override
+    public String toString() {
+        return " " + item + " - Produto:" + Produto + " - Total:" + valorTotal;
+
+    }
+
 
     public Long getCodigo() {
         return codigo;
@@ -28,19 +39,19 @@ public class PedidoItem {
         this.item = item;
     }
 
-    public Long getIdProduto() {
+    public int getIdProduto() {
         return idProduto;
     }
 
-    public void setIdProduto(Long idProduto) {
+    public void setIdProduto(int idProduto) {
         this.idProduto = idProduto;
     }
 
-    public Long getProduto() {
+    public String getProduto() {
         return Produto;
     }
 
-    public void setProduto(Long produto) {
+    public void setProduto(String produto) {
         Produto = produto;
     }
 
@@ -52,19 +63,19 @@ public class PedidoItem {
         this.quantidade = quantidade;
     }
 
-    public int getValorUnit() {
+    public Double getValorUnit() {
         return valorUnit;
     }
 
-    public void setValorUnit(int valorUnit) {
+    public void setValorUnit(Double valorUnit) {
         this.valorUnit = valorUnit;
     }
 
-    public int getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(int valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
 }

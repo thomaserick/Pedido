@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".FormItemPedidos">
+    tools:context=".FormHeadPedidos">
+
 
     <LinearLayout
         android:layout_width="355dp"
@@ -24,55 +25,40 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pedido"
+            android:text="Cliente"
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/sp_clientes"
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:scrollbarSize="6dp" />
+
         <TextView
-            android:id="@+id/et_pedido"
-            android:layout_width="212dp"
-            android:layout_height="40dp"
-            android:textSize="30sp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Forma de Pagamento"
+            android:textSize="18sp"
             android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_formpg"
+            android:layout_width="332dp"
+            android:layout_height="40dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="72dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv_itens"
-                android:layout_width="wrap_content"
-                android:layout_height="46dp"
-                android:layout_weight="1"
-                android:text="Itens do Pedido"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_addItens"
-                android:layout_width="184dp"
-                android:layout_height="55dp"
-                android:drawableLeft="@drawable/ic_action_add"
-                android:text="Itens"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/lv_itemPedido"
-            android:layout_width="match_parent"
-            android:layout_height="312dp">
-
-        </ListView>
+            android:orientation="horizontal"/>
 
         <Button
             android:id="@+id/bt_incalt"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Finalizar Pedido" />
+            android:text="Cadastrar Pedido" />
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>

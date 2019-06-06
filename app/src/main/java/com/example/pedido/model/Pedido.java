@@ -1,8 +1,9 @@
 package com.example.pedido.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Pedido {
+public class Pedido implements Serializable {
 
     private Long codigo;
     private Long idCliente;
@@ -11,6 +12,11 @@ public class Pedido {
     private Date data;
     private String status;
 
+    @Override
+    public String toString() {
+        return " " + codigo + " - Cliente:" + Cliente;
+
+    }
 
     public Long getCodigo() {
         return codigo;
