@@ -94,6 +94,10 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
+
+
+
+
     public String validarLogin(String user, String passwd) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT username,passwd from user WHERE username=? and passwd=?", new String[]{user, passwd});
@@ -371,5 +375,22 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }
     }
+
+
+    public String ultItemPedido(String pedido) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cv = db.rawQuery("Select (MAX( item )+1) as ultItem  from itemPedido where pedido=?",new String[]{pedido});
+        String item = cv.getString(0);
+        return item;
+    }
+
+    public void deletarItemPedido(PedidoItem pedidoItem) {
+
+        String[] args = {pedidoItem.getCodigo().toString()};
+        getWritableDatabase().delete("Itempedidos", "codigo=?", args);
+    }
+
+
 
 }

@@ -32,6 +32,7 @@
             android:id="@+id/et_pedido"
             android:layout_width="212dp"
             android:layout_height="40dp"
+            android:gravity="center"
             android:textSize="30sp"
             android:textStyle="bold" />
 

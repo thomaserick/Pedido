@@ -86,6 +86,10 @@ public class FormHeadPedidos extends AppCompatActivity {
 
                 if (res == true) {
                     Toast.makeText(FormHeadPedidos.this, "Pedido inserido com Sucesso!", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(FormHeadPedidos.this,FormAddItemPedido.class);
+                    //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);  //Limpa a Tela
+                    startActivity(i);
                     finish();
                 } else {
                     Toast.makeText(FormHeadPedidos.this, "Erro: Nao foi possível inserir o Pedido.", Toast.LENGTH_SHORT).show();

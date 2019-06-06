@@ -2,6 +2,8 @@ package com.example.pedido;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -66,6 +68,27 @@ public class FormAddItemPedido extends AppCompatActivity {
         });
 
 
+        etQuantidade.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                vlTotal();
+
+            }
+        });
+
+
+
         listaProduto();
 
         btAddItens.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +116,9 @@ public class FormAddItemPedido extends AppCompatActivity {
 
 
                 pedidoItem.setCodigo(pedidoSel.getCodigo());
+
+                String item = db.ultItemPedido(Long.toString(pedidoSel.getCodigo()));
+
 
                 pedidoItem.setItem(2);
 
@@ -134,11 +160,21 @@ public class FormAddItemPedido extends AppCompatActivity {
 
     public void vlTotal() {
 
-        int qtde = Integer.valueOf(etQuantidade.getText().toString());
-        int vlunit = Integer.valueOf(etPreco.getText().toString());
-        int res = qtde * vlunit;
 
-        etVltotal.setText(String.valueOf(res));
+
+        String qtde = etQuantidade.getText().toString();
+        String preco = etPreco.getText().toString();
+
+        result = campoVazio.validarFormInt(qtde);
+        if (result == false) {
+
+            Double res = Double.parseDouble(preco) * Double.parseDouble(qtde);
+
+            etVltotal.setText(String.valueOf(res));
+
+        }else {  etVltotal.setText("0.0");
+
+        }
 
 
     }
