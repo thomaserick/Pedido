@@ -94,7 +94,7 @@ public class FormAddItemPedido extends AppCompatActivity {
 
                 pedidoItem.setCodigo(pedidoSel.getCodigo());
 
-                pedidoItem.setItem(1);
+                pedidoItem.setItem(2);
 
                 pedidoItem.setIdProduto(produtoSel.getCodigo());
                 pedidoItem.setProduto(produtoSel.getDescricao());

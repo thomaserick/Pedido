@@ -37,7 +37,7 @@ public class Database extends SQLiteOpenHelper {
     private static final String DELETE_PEDIDO = "drop table if exists pedidos";
 
     //ItemPedido
-    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER PRIMARY KEY NOT NULL , item INTEGER  NOT NULL , idProduto INTEGER  NOT NULL, produto TEXT NOT NULL ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL);";
+    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER PRIMARY KEY , item INTEGER  NOT NULL , idProduto INTEGER  NOT NULL, produto TEXT NOT NULL ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL);";
     private static final String DELETE_ITEMPEDIDO = "drop table if exists itemPedidos";
 
 
