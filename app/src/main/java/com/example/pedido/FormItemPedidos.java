@@ -65,6 +65,15 @@ public class FormItemPedidos extends AppCompatActivity {
         listaItemPedido();
 
 
+        btIncalt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
+
+
         btAddItens.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

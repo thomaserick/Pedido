@@ -87,8 +87,9 @@ public class FormHeadPedidos extends AppCompatActivity {
                 if (res == true) {
                     Toast.makeText(FormHeadPedidos.this, "Pedido inserido com Sucesso!", Toast.LENGTH_SHORT).show();
 
-                    Intent i = new Intent(FormHeadPedidos.this,FormAddItemPedido.class);
+                    Intent i = new Intent(FormHeadPedidos.this,FormItemPedidos.class);
                     //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);  //Limpa a Tela
+                    i.putExtra("select-pedido", pedido);
                     startActivity(i);
                     finish();
                 } else {

@@ -3,11 +3,13 @@ package com.example.pedido;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.view.ContextMenu;
 
 import com.example.pedido.model.Clientes;
 import com.example.pedido.model.Pedido;
@@ -69,7 +71,25 @@ public class PedidoActivity extends AppCompatActivity {
         });
 
 
+
+
     }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        MenuItem menuDelete = menu.add("Deletar este Pedido");
+        ((MenuItem) menuDelete).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                db = new Database(PedidoActivity.this);
+                db.deletarPedido(pedido);
+                db.close();
+                listaPedido();
+                return true;
+            }
+        });
+    }
+
 
 
     @Override

@@ -27,7 +27,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Usuario"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/et_passw"
@@ -38,7 +39,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Senha"
-            android:inputType="textPersonName" />
+            android:inputType="textVisiblePassword"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <LinearLayout

@@ -37,7 +37,7 @@ public class Database extends SQLiteOpenHelper {
     private static final String DELETE_PEDIDO = "drop table if exists pedidos";
 
     //ItemPedido
-    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER PRIMARY KEY , item INTEGER  NOT NULL , idProduto INTEGER  NOT NULL, produto TEXT NOT NULL ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL);";
+    private static final String CREATE_ITEMPEDIDO = "CREATE TABLE itemPedidos(codigo INTEGER NOT NULL , item INTEGER  NOT NULL , idProduto INTEGER  NOT NULL, produto TEXT NOT NULL ,  quantidade INTEGER NOT NULL, valorUnit INTEGER NOT NULL , valorTotal INTEGER NOT NULL, PRIMARY KEY(codigo,item ));";
     private static final String DELETE_ITEMPEDIDO = "drop table if exists itemPedidos";
 
 
@@ -300,9 +300,11 @@ public class Database extends SQLiteOpenHelper {
 
         Long id = db.insert("pedidos", null, cv);
 
+
         if (id == -1) {
             return false;
         } else {
+            pedido.setCodigo(id);
             return true;
         }
     }
@@ -380,15 +382,35 @@ public class Database extends SQLiteOpenHelper {
     public String ultItemPedido(String pedido) {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cv = db.rawQuery("Select (MAX( item )+1) as ultItem  from itemPedido where pedido=?",new String[]{pedido});
-        String item = cv.getString(0);
-        return item;
+        Cursor c = db.rawQuery("Select (MAX( item )+1) as ultItem  from itemPedidos where codigo=?", new String[]{pedido});
+
+        if (c.getCount() > 0) {
+            c.moveToFirst();
+            Long item = c.getLong(0);
+            StringBuilder conversor = new StringBuilder();
+            conversor.append(item);
+            return conversor.toString();
+        }else {
+            return "1";
+        }
+
+
+    }
+
+
+    public void deletarPedido(Pedido pedido) {
+
+        String[] args = {pedido.getCodigo().toString()};
+
+        getWritableDatabase().delete("Itempedidos", "codigo=?", args);
+        getWritableDatabase().delete("pedidos", "codigo=?", args);
+
     }
 
     public void deletarItemPedido(PedidoItem pedidoItem) {
 
-        String[] args = {pedidoItem.getCodigo().toString()};
-        getWritableDatabase().delete("Itempedidos", "codigo=?", args);
+        String[] args = {String.valueOf(pedidoItem.getItem())};
+        getWritableDatabase().delete("Itempedidos", "item=?", args);
     }
 
 

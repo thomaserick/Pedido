@@ -119,8 +119,11 @@ public class FormAddItemPedido extends AppCompatActivity {
 
                 String item = db.ultItemPedido(Long.toString(pedidoSel.getCodigo()));
 
+                if (item.equals("0") || item.equals(" ")){
+                    item = "1";
+                }
 
-                pedidoItem.setItem(2);
+                pedidoItem.setItem(Integer.parseInt(item));
 
                 pedidoItem.setIdProduto(produtoSel.getCodigo());
                 pedidoItem.setProduto(produtoSel.getDescricao());
