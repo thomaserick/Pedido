@@ -11,16 +11,17 @@
         android:layout_width="395dp"
         android:layout_height="715dp"
         android:orientation="vertical"
+        android:paddingLeft="5dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
 
         <TextView
             android:id="@+id/tvCodigo"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:text="Código do Produto"
-                android:textSize="18sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -86,11 +87,16 @@
 
         <Button
             android:id="@+id/btn_IncaltProduto"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
             style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="346dp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_uno"
             android:drawableLeft="@drawable/ic_action_adicionar"
-            android:text="Cadastrar" />
+            android:drawablePadding="-60dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="1sp"
+            android:text="Cadastrar"
+            android:textColor="@drawable/txt_btn_uno" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

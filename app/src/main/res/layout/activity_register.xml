@@ -83,6 +83,11 @@
             android:layout_height="65dp"
             style="@style/Widget.AppCompat.Button.Colored"
             android:drawableLeft="@drawable/ic_action_per"
+            android:background="@drawable/btn_uno"
+            android:drawablePadding="-80dp"
+            android:paddingLeft="110dp"
+            android:paddingTop="1sp"
+            android:textColor="@drawable/txt_btn_uno"
             android:text="REGISTRAR" />
     </LinearLayout>
 

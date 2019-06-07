@@ -58,6 +58,11 @@
                 android:drawableLeft="@drawable/ic_action_add"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:text="Itens"
+                android:background="@drawable/btn_uno"
+                android:drawablePadding="-50dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="1sp"
+                android:textColor="@drawable/txt_btn_uno"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -73,6 +78,10 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/btn_uno"
+
+            android:paddingTop="1sp"
+            android:textColor="@drawable/txt_btn_uno"
             android:text="Finalizar Pedido" />
 
     </LinearLayout>

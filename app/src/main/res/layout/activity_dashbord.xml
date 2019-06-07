@@ -8,42 +8,60 @@
     tools:context=".DashbordActivity">
 
     <LinearLayout
-        android:layout_width="364dp"
-        android:layout_height="442dp"
+        android:layout_width="374dp"
+        android:layout_height="444dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:paddingRight="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="1dp">
 
         <Button
             android:id="@+id/bt_clientes"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="370dp"
+            android:layout_width="345dp"
             android:layout_height="71dp"
-            android:layout_margin="20dp"
+            android:layout_margin="40dp"
+
+            android:background="@drawable/btn_uno"
             android:drawableLeft="@drawable/ic_action_reg"
-            android:text="Cliente" />
+            android:drawablePadding="-60dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="1sp"
+            android:text="Cliente"
+            android:textColor="@drawable/txt_btn_uno" />
 
         <Button
             android:id="@+id/bt_produtos"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="370dp"
+            android:layout_width="345dp"
             android:layout_height="71dp"
-            android:layout_margin="20dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/btn_uno"
             android:drawableLeft="@drawable/ic_action_item"
-            android:text="Produto" />
+            android:drawablePadding="-60dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="1sp"
+            android:text="Produto"
+            android:textColor="@drawable/txt_btn_uno" />
 
         <Button
             android:id="@+id/bt_addItens"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="370dp"
+            android:layout_width="345dp"
             android:layout_height="71dp"
-            android:layout_margin="20dp"
+            android:layout_margin="40dp"
+            android:background="@drawable/btn_uno"
             android:drawableLeft="@drawable/ic_action_ped"
-            android:text="Pedido" />
+            android:drawablePadding="-60dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="1sp"
+            android:text="Pedido"
+            android:textColor="@drawable/txt_btn_uno" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -8,12 +8,13 @@
     tools:context=".FormClientes">
 
     <LinearLayout
-    android:layout_width="395dp"
-    android:layout_height="715dp"
-    android:orientation="vertical"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp"
-    tools:ignore="MissingConstraints">
+        android:layout_width="398dp"
+        android:layout_height="719dp"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="4dp">
 
         <TextView
             android:id="@+id/tvNome"
@@ -84,13 +85,18 @@
             android:textSize="24sp" />
 
 
-    <Button
-        android:id="@+id/btn_IncaltCliente"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:drawableLeft="@drawable/ic_action_adicionar"
-        android:text="Cadastrar" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_IncaltCliente"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="344dp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_uno"
+            android:drawableLeft="@drawable/ic_action_adicionar"
+            android:drawablePadding="-80dp"
+            android:paddingLeft="110dp"
+            android:paddingTop="1sp"
+            android:text="Cadastrar"
+            android:textColor="@drawable/txt_btn_uno" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
