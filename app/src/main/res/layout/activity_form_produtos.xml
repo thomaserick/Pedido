@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:text="Código do Produto"
-            android:textSize="18sp"
+                android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -28,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/tcDescricao"
@@ -43,7 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/tvQuantidae"
@@ -59,7 +63,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberSigned"
-            android:numeric="integer" />
+            android:numeric="integer"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/tvPreco"
@@ -74,12 +80,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_IncaltProduto"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_adicionar"
             android:text="Cadastrar" />
 
     </LinearLayout>

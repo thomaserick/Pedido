@@ -26,9 +26,10 @@
 
         <Button
             android:id="@+id/btn_CadPedidos"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="381dp"
             android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_pedadd"
             android:text="Cadastrar" />
 
     </LinearLayout>

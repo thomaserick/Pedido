@@ -57,6 +57,8 @@
             android:id="@+id/bt_incalt"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_adicionar"
             android:text="Cadastrar Pedido" />
 
     </LinearLayout>

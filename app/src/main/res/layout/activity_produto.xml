@@ -24,9 +24,10 @@
 
         <Button
             android:id="@+id/btn_CadProdutos"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="381dp"
             android:layout_height="60dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_adicionar"
             android:text="Cadastrar" />
 
     </LinearLayout>

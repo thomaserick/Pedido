@@ -28,6 +28,7 @@
             android:gravity="center"
             android:hint="Usuario"
             android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <EditText
@@ -35,11 +36,12 @@
             android:layout_width="293dp"
             android:layout_height="49dp"
             android:background="#11000000"
-            android:drawableLeft="@drawable/ic_img_lock"
+            android:drawableLeft="@drawable/ic_action_locl"
             android:ems="10"
             android:gravity="center"
             android:hint="Senha"
-            android:inputType="textVisiblePassword"
+            android:inputType="textVisiblePassword|textPassword"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
     </LinearLayout>
 
@@ -61,6 +63,8 @@
             android:layout_width="210dp"
             android:layout_height="64dp"
             android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_key"
             android:text="Login" />
 
         <Button
@@ -68,6 +72,8 @@
             android:layout_width="136dp"
             android:layout_height="62dp"
             android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_reg"
             android:text="Registrar" />
     </LinearLayout>
 

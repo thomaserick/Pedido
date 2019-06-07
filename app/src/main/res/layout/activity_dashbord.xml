@@ -8,33 +8,42 @@
     tools:context=".DashbordActivity">
 
     <LinearLayout
-        android:layout_width="367dp"
-        android:layout_height="584dp"
+        android:layout_width="364dp"
+        android:layout_height="442dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="139dp">
+        tools:layout_editor_absoluteX="8dp">
 
         <Button
             android:id="@+id/bt_clientes"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="370dp"
             android:layout_height="71dp"
             android:layout_margin="20dp"
+            android:drawableLeft="@drawable/ic_action_reg"
             android:text="Cliente" />
 
         <Button
             android:id="@+id/bt_produtos"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="370dp"
             android:layout_height="71dp"
             android:layout_margin="20dp"
+            android:drawableLeft="@drawable/ic_action_item"
             android:text="Produto" />
 
         <Button
             android:id="@+id/bt_addItens"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="370dp"
             android:layout_height="71dp"
             android:layout_margin="20dp"
+            android:drawableLeft="@drawable/ic_action_ped"
             android:text="Pedido" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

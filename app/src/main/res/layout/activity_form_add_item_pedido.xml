@@ -41,6 +41,7 @@
             android:ems="10"
             android:hint="Quantidade"
             android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <EditText
@@ -56,6 +57,7 @@
             android:inputType="numberDecimal"
             android:saveEnabled="true"
             android:soundEffectsEnabled="false"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <EditText
@@ -69,12 +71,15 @@
             android:hint="Valor Total"
             android:imeOptions="actionNone"
             android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/bt_addItens"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_adicionar"
             android:text="Adicionar" />
 
     </LinearLayout>

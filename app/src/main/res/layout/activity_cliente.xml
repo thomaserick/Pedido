@@ -18,13 +18,15 @@
         <ListView
             android:id="@+id/lv_clientes"
             android:layout_width="384dp"
-            android:layout_height="504dp">
+            android:layout_height="504dp"
+            android:scrollbarSize="4dp">
 
         </ListView>
 
         <Button
             android:id="@+id/btn_CadClientes"
             style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_reg"
             android:layout_width="381dp"
             android:layout_height="60dp"
             android:text="Cadastrar" />

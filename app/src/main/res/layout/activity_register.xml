@@ -26,7 +26,9 @@
             android:layout_margin="20dp"
             android:ems="10"
             android:hint="@string/nome"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/et_reg_user"
@@ -35,7 +37,9 @@
             android:layout_margin="20dp"
             android:ems="10"
             android:hint="@string/usuario"
-            android:inputType="textPersonName|text" />
+            android:inputType="textPersonName|text"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/et_reg_passwd"
@@ -44,7 +48,9 @@
             android:layout_margin="20dp"
             android:ems="10"
             android:hint="@string/senha"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/et_reg_cpasswd"
@@ -53,7 +59,9 @@
             android:layout_margin="20dp"
             android:ems="10"
             android:hint="@string/confirma_senha"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -73,7 +81,9 @@
             android:id="@+id/bt_reg_new"
             android:layout_width="340dp"
             android:layout_height="65dp"
-            android:text="Gravar" />
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:drawableLeft="@drawable/ic_action_per"
+            android:text="REGISTRAR" />
     </LinearLayout>
 
 
