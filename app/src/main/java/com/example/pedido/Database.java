@@ -321,7 +321,7 @@ public class Database extends SQLiteOpenHelper {
 
             pedido.setCodigo(c.getLong(0));
             pedido.setCliente(c.getString(2));
-
+            pedido.setFormapg(c.getString(3));
             pedidos.add(pedido);
 
         }

@@ -14,7 +14,7 @@ public class Pedido implements Serializable {
 
     @Override
     public String toString() {
-        return " " + codigo + " - Cliente:" + Cliente;
+        return " " + codigo + " - Cliente: " + Cliente + " - Forma: " + formapg;
 
     }
 

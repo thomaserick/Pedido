@@ -76,16 +76,16 @@
 
         <Button
             android:id="@+id/bt_addItens"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:drawableLeft="@drawable/ic_action_adicionar"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
             android:background="@drawable/btn_uno"
+            android:drawableLeft="@drawable/ic_action_adicionar"
             android:drawablePadding="-80dp"
             android:paddingLeft="110dp"
             android:paddingTop="1sp"
-            android:textColor="@drawable/txt_btn_uno"
-            android:text="Adicionar" />
+            android:text="Adicionar"
+            android:textColor="@drawable/txt_btn_uno" />
 
     </LinearLayout>
 

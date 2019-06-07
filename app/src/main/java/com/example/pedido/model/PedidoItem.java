@@ -18,7 +18,7 @@ public class PedidoItem implements Serializable {
 
     @Override
     public String toString() {
-        return " 0000" + item + " - " + Produto + " - Total:" + valorTotal;
+        return " 0000" + item + " - " + Produto + " - QTD: " + quantidade +" - Total: R$ " + valorTotal;
 
     }
 
