@@ -1,4 +1,4 @@
-#Pedido de Venda (Mobile)
+Pedido de Venda (Mobile)
 
 Projeto realizado na Fatec, com o objetivo de aprimorar meus conhecimentos na stack Java Mobile.
 
