@@ -5,3 +5,9 @@ Projeto realizado na Fatec, com o objetivo de aprimorar meus conhecimentos na st
 <b>Detalhes do projeto</b>
 <li>Pedido de Venda mobile, com banco de Dados Sqlite.</li>
 
+- Cadastro de Usuário
+- Cadastro de Clientes
+- Cadastro de Produtos
+- Cadastri de Pedido
+
+
