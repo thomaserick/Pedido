@@ -8,6 +8,6 @@ Projeto realizado na Fatec, com o objetivo de aprimorar meus conhecimentos na st
 - Cadastro de Usuário
 - Cadastro de Clientes
 - Cadastro de Produtos
-- Cadastri de Pedido
+- Cadastro de Pedido
 
 
